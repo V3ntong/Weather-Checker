@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Checker</h1>
+        <form method="POST">
+            <input type="text" name="city" placeholder="Enter city name..." required>
+            <button type="submit">Check Weather</button>
+        </form>
+
+        {% if weather %}
+            <div class="result-card">
+                {% if weather.error %}
+                    <p class="error">{{ weather.error }}</p>
+                {% else %}
+                    <h2>{{ weather.city }}</h2>
+                    <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="weather icon">
+                    <h3>{{ weather.temp }}°C</h3>
+                    <p>{{ weather.desc | capitalize }}</p>
+                    <p>Humidity: {{ weather.humidity }}%</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

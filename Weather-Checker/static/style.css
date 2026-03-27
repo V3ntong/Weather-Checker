@@ -1,0 +1,56 @@
+body {
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(to bottom right, #E4E7E4, #0A1647);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 15px 50px 15px rgba(27, 20, 20, 0.2);
+    border: 1px solid rgb(130, 126, 126);
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(130, 126, 126);
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #9BAFD9, #103783);
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid rgb(130, 126, 126);
+    transition: 1.5s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #103783, #9BAFD9);
+    background-position: right center;
+    transition: 1.5s ease;
+}
+
+.result-card {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.error { color: red; }
